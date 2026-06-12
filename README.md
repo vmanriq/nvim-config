@@ -9,7 +9,7 @@ monorepos NX. Guía completa de keymaps y workflows en [GUIDE.md](GUIDE.md).
 ## Quick Setup (máquina nueva, macOS)
 
 ```bash
-git clone git@github.com:<user>/nvim-config.git ~/.config/nvim
+git clone git@github.com:vmanriq/nvim-config.git ~/.config/nvim
 cd ~/.config/nvim
 ./setup.sh    # brew bundle, npm globals, symlink worktree.zsh, checks de gh/aws
 nvim          # lazy.nvim instala los plugins desde lazy-lock.json
