@@ -1,4 +1,28 @@
-# kickstart.nvim
+# nvim-config
+
+Config personal de Neovim de Vicente Manríquez, fork de
+[kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) con plugins propios:
+Octo (PR review), Neogit, Oil, Harpoon, toggleterm, dashboard de git worktrees,
+módulo AWS SSO (`:AwsCheck`/`:AwsLogin`), snippets CDK y LSP afinado para
+monorepos NX. Guía completa de keymaps y workflows en [GUIDE.md](GUIDE.md).
+
+## Quick Setup (máquina nueva, macOS)
+
+```bash
+git clone git@github.com:<user>/nvim-config.git ~/.config/nvim
+cd ~/.config/nvim
+./setup.sh    # brew bundle, npm globals, symlink worktree.zsh, checks de gh/aws
+nvim          # lazy.nvim instala los plugins desde lazy-lock.json
+```
+
+Después del primer arranque: `gh auth login` (PR review con Octo) y
+`aws configure sso` (perfiles para `:AwsCheck`).
+
+Para traer updates de kickstart upstream: `git fetch upstream && git merge upstream/master`.
+
+---
+
+# kickstart.nvim (docs originales)
 
 ## Introduction
 
