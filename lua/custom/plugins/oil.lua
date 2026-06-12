@@ -1,0 +1,36 @@
+return {
+  'stevearc/oil.nvim',
+  dependencies = { 'nvim-tree/nvim-web-devicons' },
+  lazy = false,
+  keys = {
+    { '-', '<cmd>Oil<cr>', desc = 'Open parent directory (oil)' },
+    { '<leader>-', '<cmd>Oil --float<cr>', desc = 'Open parent directory (oil float)' },
+  },
+  opts = {
+    default_file_explorer = false,
+    delete_to_trash = true,
+    skip_confirm_for_simple_edits = false,
+    view_options = {
+      show_hidden = true,
+      natural_order = true,
+    },
+    keymaps = {
+      ['g?'] = 'actions.show_help',
+      ['<CR>'] = 'actions.select',
+      ['<C-s>'] = { 'actions.select', opts = { vertical = true } },
+      ['<C-h>'] = { 'actions.select', opts = { horizontal = true } },
+      ['<C-t>'] = { 'actions.select', opts = { tab = true } },
+      ['<C-p>'] = 'actions.preview',
+      ['<C-c>'] = 'actions.close',
+      ['<C-l>'] = 'actions.refresh',
+      ['-'] = 'actions.parent',
+      ['_'] = 'actions.open_cwd',
+      ['`'] = 'actions.cd',
+      ['~'] = { 'actions.cd', opts = { scope = 'tab' } },
+      ['gs'] = 'actions.change_sort',
+      ['gx'] = 'actions.open_external',
+      ['g.'] = 'actions.toggle_hidden',
+      ['g\\'] = 'actions.toggle_trash',
+    },
+  },
+}

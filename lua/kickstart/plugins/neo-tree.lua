@@ -9,11 +9,21 @@ return {
     'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
     'MunifTanjim/nui.nvim',
   },
-  lazy = false,
+  lazy = true,
   keys = {
     { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
   },
   opts = {
+    default_component_configs = {
+      diagnostics = {
+        symbols = {
+          error = ' ',
+          warn = ' ',
+          hint = '󰠠 ',
+          info = ' ',
+        },
+      },
+    },
     filesystem = {
       window = {
         mappings = {
